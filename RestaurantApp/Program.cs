@@ -40,7 +40,7 @@ namespace RestaurantApp
             }
 
             averagepoint = totalpoint / list.Count;
-            Console.WriteLine
+            Console.WriteLine(averagepoint);
 
         }
     }
