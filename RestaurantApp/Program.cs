@@ -14,6 +14,8 @@ namespace RestaurantApp
             Console.WriteLine("Hello Sit 1/1");
             Console.WriteLine("week 2");
 
+            
+
             List<Restaurant> list = new List<Restaurant>
             {
                new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
@@ -38,7 +40,24 @@ namespace RestaurantApp
             {
                 totalpoint = totalpoint + list[i].Point;
             }
+            Console.WriteLine("=== Add Restaurant ===");
 
+            Console.Write("Enter restaurant name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter restaurant type: ");
+            string type = Console.ReadLine();
+
+            Console.Write("Enter restaurant point: ");
+            double point = Convert.ToDouble(Console.ReadLine());
+
+            int id = list.Count + 1;
+
+            Restaurant newRestaurant = new Restaurant(id, name, type, point);
+
+            list.Add(newRestaurant);
+
+            Console.WriteLine("Restaurant added successfully!");
             averagepoint = totalpoint / list.Count;
             Console.WriteLine("Rating = "+averagepoint);
 
