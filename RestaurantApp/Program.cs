@@ -14,6 +14,10 @@ namespace RestaurantApp
  
             Console.WriteLine("Hello Sit 1/1");
             Console.WriteLine("week 2");
+            
+
+            Console.WriteLine("แสดงคะแนนสูงสุดและต่ำสุด");
+            Console.WriteLine();
 
             
 
@@ -71,7 +75,20 @@ namespace RestaurantApp
             Console.WriteLine("Restaurant added successfully!");
             averagepoint = totalpoint / list.Count;
             Console.WriteLine("Rating = "+averagepoint);
+            Console.WriteLine("Restaurant with rating 4.5 or higher:");
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Point >= 4.5)
+                {
+                    Console.WriteLine(
+                        $"{list[i].Id} " +
+                        $"{list[i].Name} " +
+                        $"{list[i].Type} " +
+                        $"{list[i].Point}"
+                    );
+                }
+            }
 
             Console.WriteLine($"คะแนนสูงสุด: {highest.Name} ({highest.Type}) = {highest.Point}");
             Console.WriteLine($"คะแนนต่ำสุด: {lowest.Name} ({lowest.Type}) = {lowest.Point}");
