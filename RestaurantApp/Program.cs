@@ -14,6 +14,7 @@ namespace RestaurantApp
             Console.WriteLine("Hello Sit 1/1");
             Console.WriteLine("week 2");
 
+
             List<Restaurant> list = new List<Restaurant>
             {
                new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
@@ -41,7 +42,20 @@ namespace RestaurantApp
 
             averagepoint = totalpoint / list.Count;
             Console.WriteLine("Rating = "+averagepoint);
+            Console.WriteLine("Restaurant with rating 4.5 or higher:");
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Point >= 4.5)
+                {
+                    Console.WriteLine(
+                        $"{list[i].Id} " +
+                        $"{list[i].Name} " +
+                        $"{list[i].Type} " +
+                        $"{list[i].Point}"
+                    );
+                }
+            }
         }
     }
     
