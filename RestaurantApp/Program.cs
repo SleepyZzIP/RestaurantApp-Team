@@ -57,7 +57,7 @@ namespace RestaurantApp
 
             list.Add(newRestaurant);
 
-            Console.WriteLine("Restaurant added successfully!.");
+            Console.WriteLine("Restaurant added successfully!");
             averagepoint = totalpoint / list.Count;
             Console.WriteLine("Rating = "+averagepoint);
 
